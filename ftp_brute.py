@@ -41,8 +41,8 @@ def main():
     parser.add_option('-m', dest='mode', type='string', help='Specify Mode you want to use. -m 1 for passsword file with username and password separated by : and -m 2 for entering one username and corresponding password file')
     parser.add_option('-H', dest='hostname', type='string', help='Specify hostname')
     parser.add_option('-f', dest='passwd', type='string', help='Specify dictionary file')
-    parser.add_option('-u', dest='username', action="string", help='When using -m 2, use this option for username' )
-    parser.add_option('-s', dest='sepchar', action="string", help='Optional argument - When using -m 1, use this option for charachter separating username and password' )
+    parser.add_option('-u', dest='username', type='string', help='When using -m 2, use this option for username' )
+    parser.add_option('-s', dest='sepchar', type='string', help='Optional argument - When using -m 1, use this option for charachter separating username and password' )
     (options, args)=parser.parse_args()
     username=options.username
     hostname=options.hostname
